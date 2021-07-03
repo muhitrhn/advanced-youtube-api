@@ -122,6 +122,32 @@ class Video {
              */
             this.duration = data.contentDetails.duration ? duration.parse(data.contentDetails.duration) : null;
         }
+        
+        if(data.statistics) {
+            /**
+             * An object containing video likes, dislikes and views information. All properties are integers, and do not include the lower
+             * precision ones.
+             * @typedef {Object} Statistics
+             */
+
+            /**
+             * The likes of the video
+             * @type {?Statistics}
+             */
+            this.likes = data.statistics.likeCount;
+            
+            /**
+             * The dislikes of the video
+             * @type {?Statistics}
+             */
+            this.dislikes = data.statistics.dislikeCount;
+                        
+            /**
+             * The views of the video
+             * @type {?Statistics}
+             */
+            this.dislikes = data.statistics.viewCount;
+        }
 
         return this;
     }
