@@ -30,12 +30,6 @@ class Video {
         if (!data) return;
 
         /**
-         * The raw data from the YouTube API.
-         * @type {object}
-         */
-        this.raw = data;
-
-        /**
          * Whether this is a full (returned from the videos API end point) or partial video (returned
          * as part of another resource).
          * @type {boolean}
