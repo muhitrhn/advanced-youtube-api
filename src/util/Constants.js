@@ -1,6 +1,6 @@
 exports.PARTS = {
     Search: 'snippet',
-    Videos: 'snippet,contentDetails',
+    Videos: 'snippet,contentDetails, statistics',
     Playlists: 'snippet',
     PlaylistItems: 'snippet,status',
     Channels: 'snippet'
