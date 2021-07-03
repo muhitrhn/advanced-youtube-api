@@ -146,7 +146,7 @@ class Video {
              * The views of the video
              * @type {?Statistics}
              */
-            this.dislikes = data.statistics.viewCount;
+            this.views = data.statistics.viewCount;
         }
 
         return this;
