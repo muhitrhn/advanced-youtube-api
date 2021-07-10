@@ -147,6 +147,18 @@ class Video {
              * @type {?Statistics}
              */
             this.views = data.statistics.viewCount;
+            
+            /**
+             * Favourite count of the video
+             * @type {?Statistics}
+             */
+            this.favs = data.statistics.favoriteCount;
+            
+            /**
+             * Comments count of the video
+             * @type {?Statistics}
+             */
+            this.favs = data.statistics.commentCount;
         }
 
         return this;
