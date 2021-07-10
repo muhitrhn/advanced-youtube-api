@@ -98,6 +98,12 @@ class Video {
              * @type {Channel}
              */
             this.channel = new Channel(this.youtube, data);
+            
+            /**
+             * Type of the video.
+             * @type {String.<'live', 'none', 'upcoming'>}
+             */
+            this.type = data.snippet.liveBroadcastContent;
         }
 
         if(data.contentDetails) {
