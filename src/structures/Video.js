@@ -103,7 +103,7 @@ class Video {
              * Type of the video.
              * @type {String.<'live', 'none', 'upcoming'>}
              */
-            this.type = data.snippet.liveBroadcastContent;
+            this.live = data.snippet.liveBroadcastContent;
         }
 
         if(data.contentDetails) {
