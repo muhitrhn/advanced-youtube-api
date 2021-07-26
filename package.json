@@ -1,6 +1,6 @@
 {
   "name": "simple-youtube-api",
-  "version": "5.2.3",
+  "version": "5.2.4",
   "description": "A module to simplify the YouTube API.",
   "author": "Bryan Pikaard <hypercoder@typicalbot.com>",
   "maintainers": [
