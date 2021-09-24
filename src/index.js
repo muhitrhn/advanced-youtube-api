@@ -173,6 +173,29 @@ class YouTube {
     }
 
     /**
+     * Search YouTube for videos related to the video id
+     * @param {string} query The string to search for
+     * @param {number} [limit = 5] Maximum results to obtain
+     * @param {Object} [options] Additional options to pass to the API request
+     * @returns {Promise<Array<Video|null>>}
+     * @example
+     * API.search('Centuries')
+     *  .then(results => {
+     *    console.log(`I got ${results.length} results`);
+     *  })
+     *  .catch(console.error);
+     */
+    getRelatedVideos(url, limit = 100, options = {}) {
+        const id = Video.extractID(url);
+        if (!id) return Promise.reject(new Error(`No video ID found in URL: ${url}`));
+        return this.request.getPaginated(Constants.ENDPOINTS.Search, limit, Object.assign(options, { part: Constants.PARTS.Search, relatedToVideoId: id, type: Constants.TYPE.Search }))
+            .then(result => result.map(item => {
+                if (item.id.kind === Constants.KINDS.Video) return new Video(this, item);
+                return null;
+            }));
+    }
+
+    /**
      * Search YouTube for videos
      * @param {string} query The string to search for
      * @param {number} [limit = 5] Maximum results to obtain

@@ -1,20 +1,20 @@
 {
-  "name": "simple-youtube-api",
+  "name": "advanced-youtube-api",
   "version": "5.2.4",
   "description": "A module to simplify the YouTube API.",
-  "author": "Bryan Pikaard <hypercoder@typicalbot.com>",
+  "author": "Muhit Raihan <muhitrhn@icloud.com>",
   "maintainers": [
-    "Tyler Richards <rocket0191@gmail.com>"
+    "Muhit Raihan <muhitrhn@icloud.com>"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tjrgg/simple-youtube-api.git"
+    "url": "https://github.com/muhitrhn/advanced-youtube-api.git"
   },
   "bugs": {
-    "url": "https://github.com/tjrgg/simple-youtube-api/issues"
+    "url": "https://github.com/muhitrhn/advanced-youtube-api/issues"
   },
-  "homepage": "https://github.com/tjrgg/simple-youtube-api",
+  "homepage": "https://github.com/muhitrhn/advanced-youtube-api",
   "sideEffects": false,
   "main": "src/index.js",
   "unpkg": "dist/sya.min.js",

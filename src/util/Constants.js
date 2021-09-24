@@ -6,6 +6,10 @@ exports.PARTS = {
     Channels: 'snippet'
 };
 
+exports.TYPES = {
+    Search: 'video'
+};
+
 exports.KINDS = {
     Video: 'youtube#video',
     PlaylistItem: 'youtube#playlistItem',
