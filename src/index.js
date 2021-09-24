@@ -188,7 +188,7 @@ class YouTube {
     getRelatedVideos(url, limit = 100, options = {}) {
         const id = Video.extractID(url);
         if (!id) return Promise.reject(new Error(`No video ID found in URL: ${url}`));
-        return this.request.getPaginated(Constants.ENDPOINTS.Search, limit, Object.assign(options, { part: Constants.PARTS.Search, relatedToVideoId: id, type: Constants.TYPE.Search }))
+        return this.request.getPaginated(Constants.ENDPOINTS.Search, limit, Object.assign(options, { part: Constants.PARTS.Search, relatedToVideoId: id, type: Constants.TYPES.Search }))
             .then(result => result.map(item => {
                 if (item.id.kind === Constants.KINDS.Video) return new Video(this, item);
                 return null;
